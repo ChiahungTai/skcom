@@ -28,9 +28,9 @@ logger = logging.getLogger('skcom')
 def fix_encoding(thestr):
     # TODO: 股票名稱的編碼可能會被 Python 的參數影響, 需要測試一下
     # 換了 Python 版本以後, 這樣才能取得正確中文字
-    newstr = bytes(map(ord, thestr)).decode('cp950')
+    # newstr = bytes(map(ord, thestr)).decode('cp950')
     # 原本這樣就可以
-    # newstr = thestr
+    newstr = thestr
     return newstr
 
 class ReceiverState(enum.Enum):
